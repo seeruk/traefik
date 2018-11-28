@@ -108,7 +108,7 @@ type GlobalConfiguration struct {
 	API                       *api.Handler            `description:"Enable api/dashboard" export:"true"`
 	Metrics                   *types.Metrics          `description:"Enable a metrics exporter" export:"true"`
 	Ping                      *ping.Handler           `description:"Enable ping" export:"true"`
-	HostResolver              *HostResolverConfig     `description:"Enable CNAME Flattening" export:"true"`
+	HostResolver              *HosttResolverConfig    `description:"Enable CNAME Flattening" export:"true"`
 }
 
 // WebCompatibility is a configuration to handle compatibility with deprecated web provider options

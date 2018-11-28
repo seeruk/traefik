@@ -86,6 +86,7 @@ type HealthCheck struct {
 
 // Server holds server configuration.
 type Server struct {
+	Ref    string `json:"ref,omitempty"`
 	URL    string `json:"url,omitempty"`
 	Weight int    `json:"weight"`
 }
