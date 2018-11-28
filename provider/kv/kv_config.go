@@ -261,7 +261,7 @@ func (p *Provider) getLoadBalancer(rootPath string) *types.LoadBalancer {
 		Sticky: p.getSticky(rootPath),
 	}
 
-	if p.getBool(false, rootPath, pathBackendLoadBalancerStickiness) {
+	if p.hasPrefix(rootPath, pathBackendLoadBalancerStickiness) {
 		lb.Stickiness = &types.Stickiness{
 			CookieName: p.get("", rootPath, pathBackendLoadBalancerStickinessCookieName),
 		}
